@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscar Animal por ID</title>
+    <script>
+      async function buscarAnimal() {
+        const id_animal = document.getElementById('id_animal').value;
+
+        try {
+          const response = await fetch('../crud/buscarAnimalPorId.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ id_animal })
+          });
+
+          const data = await response.json();
+
+          if (data.error) {
+            alert(data.error);
+          } else {
+            // Mostrar los detalles del animal en el DOM
+            const animalDetails = document.getElementById('animal-details');
+            animalDetails.innerHTML = `
+              <h2>Detalles del Animal</h2>
+              <p>ID: ${data.id_animal}</p>
+              <p>Nombre: ${data.nombre}</p>
+              <p>Especie: ${data.especie}</p>
+              <p>Edad: ${data.edad}</p>
+              <p>Descripción: ${data.descripcion}</p>
+              <img src="${data.imagen}" alt="${data.nombre}" />
+            `;
+          }
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Buscar Animal por ID</h1>
+    <form onsubmit="event.preventDefault(); buscarAnimal();">
+      <label for="id_animal">ID del Animal:</label>
+      <input type="number" id="id_animal" name="id_animal" required>
+      <button type="submit">Buscar</button>
+    </form>
+    
+    <div id="animal-details"></div> <!-- Área para mostrar detalles del animal -->
+  </body>
+</html>
