@@ -49,8 +49,8 @@
       <p>Busque al animal por identificador</p>
     </article>
     <article>
-      <form class="d-flex formularioHome" role="search">
-        <input class="inputBuscar" type="search" placeholder="Escriba el id del animal" aria-label="Buscador">
+      <form class="d-flex formularioHome" role="search" id="searchForm">
+        <input class="inputBuscar" type="search" id="animalId" placeholder="Escriba el id del animal" aria-label="Buscador">
         <button class="btn botonBuscar" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
       </form>
     </article>
@@ -58,6 +58,7 @@
   <!-- ========== Contenido ========== -->
 
   <!-- ========== Bootstrap JS ========== -->
+  <script src="/Frontend/js/fetch.js"></script>
   <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
   <!-- ========== Bootstrap JS ========== -->
 </body>

@@ -33,13 +33,6 @@ function renderTablePage(page, dataToRender) {
     cell3.textContent = user.gender;
     cell4.textContent = user.email;
     cell5.textContent = user.status;
-    /*
-    // Cambiar esto según los datos reales
-    cell4.textContent = user.castrated; 
-    cell5.textContent = user.castration_date; /
-    cell6.textContent = user.vaccinated; 
-    cell7.textContent = user.address; 
-    */
   });
 
   updatePaginationControls(page, dataToRender.length);

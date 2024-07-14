@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <!-- ========== Bootstrap  ========== -->
-  <link rel="stylesheet" href="/Frontend/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="/Frontend/bootstrap-5.3.3-dist/css/bootstrap.min.css">
   <!-- ========== Bootstrap  ========== -->
   
   <!-- ========== CSS ========== -->
@@ -81,21 +81,21 @@
     <div class="row rowPC mt-4">
       <!-- Columna 1 -->
       <div class="col-md-1 imagenes d-flex flex-column">
-        <img src="/Frontend/img/imagenDescripcion1.png" class="items my-1 img-fluid" alt="">
-        <img src="/Frontend/img/imagenDescripcion2.png" class="items my-1 img-fluid" alt="">
+        <img src="/Frontend/img/Image-not-found.png" id="imagenOne" class="items my-1 img-fluid" alt="">
+        <img src="/Frontend/img/Image-not-found.png" id="imagenTwo" class="items my-1 img-fluid" alt="">
       </div>
 
       <!-- Columna 2 -->
       <div class="col-md-4">
-        <img src="/Frontend/img/imagenDescripcion3.png" class="object-fit-none item img-fluid" alt="...">
+        <img src="/Frontend/img/Image-not-found.png" id="imagenGrande" class="object-fit-none item img-fluid" alt="...">
         <div class="text-center my-4"></div>
         <div class="card tarjetaCara px-5 py-2">
           <div class="card-body">
-            <p class="card-text">Tamaño:  _______</p>
-            <p class="card-text">Raza:  _______</p>
-            <p class="card-text">Color:  _______</p>
-            <p class="card-text">Edad:  _______</p>
-            <p class="card-text">Sexo:  _______</p>
+            <p class="card-text" id="animalSize">Tamaño: </p>
+            <p class="card-text" id="animalSpecie">Raza: </p>
+            <p class="card-text" id="animalColor">Color: </p>
+            <p class="card-text" id="animalAge">Edad: </p>
+            <p class="card-text" id="animalGender">Sexo: </p>
           </div>
         </div>
       </div>
@@ -106,7 +106,7 @@
           <div class="row">
             <div class="col-12 col-md-auto mt-2">
               <div class="d-flex justify-content-center justify-content-md-start">
-                <span class="badge rounded-pill id mx-2">ID ____</span>
+                <span class="badge rounded-pill id mx-2" id="animalId">ID </span>
                 <span id="castrado"  class="badge rounded-pill castrado mx-2">Castrado</span>
                 <span id="agresivo"  class="badge rounded-pill agresivo mx-2">Agresivo</span>
               </div>
@@ -125,15 +125,15 @@
             </div>
           </div>
         </div>
-        <h1 class="my-4">Chocolate blanco</h1>
+        <h1 class="my-4" id="animalName"></h1>
         <!-- Dueño -->
         <div class="card cardDueño">
           <div class="card-body">
             <h5 class="card-title">Dueño:</h5>
             <ul>
-              <li>__________________________</li>
-              <li>__________________________</li>
-              <li>___________________________</li>
+              <li id="dueñoName"></li>
+              <li id="dueñoAddress"></li>
+              <li id="dueñoPhone"></li>
             </ul>
           </div>
         </div>
@@ -164,7 +164,7 @@
             <div class="col-12 col-md"></div>
             <div class="col-12 col-md-auto mt-2">
               <div class="d-flex justify-content-center justify-content-md-start">
-                <span class="badge rounded-pill id">ID ____</span>
+                <span class="badge rounded-pill id" id="animalId">ID </span>
                 <span id="castrado"  class="badge rounded-pill castrado mx-2">Castrado</span>
                 <span id="agresivo"  class="badge rounded-pill agresivo mx-2">Agresivo</span>
               </div>
@@ -176,15 +176,15 @@
       <!-- Columna 2 -->
       <div class="col-md-4">
         <img src="/Frontend/img/imagenDescripcion3.png" class="object-fit-none item img-fluid" alt="...">
-        <h1 class="my-4">Chocolate blanco</h1>
+        <h1 class="my-4" id="animalName"></h1>
         <!-- Dueño -->
         <div class="card cardDueño">
           <div class="card-body">
             <h5 class="card-title">Dueño:</h5>
             <ul>
-              <li>__________________________</li>
-              <li>__________________________</li>
-              <li>___________________________</li>
+              <li id="dueñoName"></li>
+              <li id="dueñoAddress"></li>
+              <li id="dueñoPhone"></li>
             </ul>
           </div>
         </div>
@@ -195,11 +195,11 @@
         <div class="text-center my-4"></div>
         <div class="card tarjetaCara px-5 py-2">
           <div class="card-body">
-            <p class="card-text">Tamaño:  _______</p>
-            <p class="card-text">Raza:  _______</p>
-            <p class="card-text">Color:  _______</p>
-            <p class="card-text">Edad:  _______</p>
-            <p class="card-text">Sexo:  _______</p>
+            <p class="card-text" id="animalSize">Tamaño: </p>
+            <p class="card-text" id="animalSpecie">Raza: </p>
+            <p class="card-text" id="animalColor">Color: </p>
+            <p class="card-text" id="animalAge">Edad: </p>
+            <p class="card-text" id="animalGender">Sexo: </p>
           </div>
         </div>
       </div>
@@ -212,7 +212,7 @@
         <div class="card-body d-flex align-items-center">
           <img src="/Frontend/img/pataNegra.png" alt="imagen de patita de animal" width="30" height="30" class="mb-1">
           <h2 class="card-title mx-3 text-black">Castrado</h2>
-          <h5 class="mt-1 mx-1">24/04/24</h5>
+          <h5 class="mt-1 mx-1" id="fechaCastrado"></h5>
         </div>
       </div>
     </div>
@@ -275,7 +275,7 @@
         
           <div class="d-flex flex-column">
             <h2 class="card-title mx-3 text-black">Informe</h2>
-            <p class="mt-2">Macho común europea de un año, negativo a leucemia e inmunodeficiencia felina, sin contacto con otros animales y no accede al exterior. Durante los días previos a la consulta los propietarios describen debilidad, apatía y decaimiento, con hiporexia y apetito caprichoso asociado. Estos signos motivaron una consulta en su centro veterinario habitual, donde observaron taquipnea y palidez severa de las mucosas, por lo que decidieron transferir el caso a un centro de urgencias.</p>
+            <p class="mt-2" id="informe"></p>
           </div>
         </div>
       </div>
@@ -363,7 +363,7 @@
   <!-- ========== Modal ========== -->
   
   <!-- ========== Bootstrap JS ========== -->
-  <script src="/Frontend/js/descripciónAnimal.js"></script>
+  <script src="/Frontend/js/descripcionAnimal.js"></script>
   <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
   <!-- ========== Bootstrap JS ========== -->
 </body>

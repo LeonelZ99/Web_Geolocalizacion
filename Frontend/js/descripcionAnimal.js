@@ -1,7 +1,31 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Fetch
+    const data = JSON.parse(localStorage.getItem('animalId'));
+    if(data){
+        document.getElementById("animalSize").innerHTML += `${data.status}`;   //TAMAÑO
+        document.getElementById("animalSpecie").innerHTML += `${data.species}`; //RAZA
+        document.getElementById("animalColor").innerHTML += `${data.species}`;  //COLOR
+        document.getElementById("animalAge").innerHTML += `${data.species}`;    //EDAD
+        document.getElementById("animalGender").innerHTML += `${data.gender}`;  //SEXO
+        document.getElementById("animalId").innerHTML += `${data.id}`;          //ID
+        document.getElementById("animalName").innerHTML += `${data.name}`;      //NAME
+        document.getElementById("imagenGrande").src = `${data.image}`;          //IMAGEN GRANDE
+        document.getElementById("imagenOne").src = `${data.image}`;             //IMAGEN ONE
+        document.getElementById("imagenTwo").src = `${data.image}`;             //IMAGEN TWO
+        document.getElementById("dueñoName").innerHTML += `${data.name}`;       //NOMBRE DUEÑO
+        document.getElementById("dueñoAddress").innerHTML += `${data.status}`;    //DIRECCION DUEÑO
+        document.getElementById("dueñoPhone").innerHTML += `${data.gender}`;      //TELEFONO DUEÑO
+        document.getElementById("fechaCastrado").innerHTML += `${data.count}`;    //FECHA CASTRACION
+        document.getElementById("informe").innerHTML += `${data.name}`;           //INFORME 
+
+    } else {
+        console.error('No se encontraron datos del personaje en localStorage.');
+    }
+
+    // Efecto en fecha de castrado
     const spanElement = document.getElementById("castrado");
     spanElement.addEventListener("mouseover", function() {
-        this.textContent = "24/04/24";  //Hay que cambiar con la fecha de la BD
+        this.textContent = `${data.status}`;                                //FECHA DE CASTRACIÓN
     });
 
     spanElement.addEventListener("mouseout", function() {
